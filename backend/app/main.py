@@ -6,9 +6,10 @@ from app.routes.attendance_routes import router as attendance_router
 
 app = FastAPI()
 
-# CORS configuration
+
 origins = [
-    "http://localhost:5173",  # React dev server
+    "http://localhost:5173", 
+    "https://hrms-lite-bw9sgvlyc-dheerajclouds-projects.vercel.app" 
 ]
 
 app.add_middleware(
@@ -19,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register routers
+
 app.include_router(employee_router)
 app.include_router(attendance_router)
 
