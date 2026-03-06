@@ -8,8 +8,7 @@ app = FastAPI()
 
 
 origins = [
-    "http://localhost:5173", 
-    "https://hrms-lite-bay-theta.vercel.app/" 
+    "*"
 ]
 
 app.add_middleware(
